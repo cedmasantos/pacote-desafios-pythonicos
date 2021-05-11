@@ -11,8 +11,20 @@ Retorne o resultado da string.
 """
 
 def verbing(s):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # +++ SUA SOLUÇÃO 1 +++
+    # if len(s) >= 3:
+    #     if s[-3:] == 'ing':
+    #         s = s + 'ly'
+    #     else:
+    #         s = s + 'ing'
+    # +++ SUA SOLUÇÃO 2 +++
+    new_s = s
+    if len(s) > 2 and s[-3:] == 'ing':
+        new_s = ''.join([s, 'ly'])
+    elif len(s) >2 and s[-3:] != 'ing':
+        new_s = ''.join([s, 'ing'])
+
+    return new_s
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
