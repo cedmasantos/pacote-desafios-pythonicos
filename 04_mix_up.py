@@ -13,8 +13,23 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # +++ SUA SOLUÇÃO 1 +++
+    # newa = b[0] + b[1] + a[2:]
+    #
+    # newb = a[0] + a[1] + b[2:]
+    # newS = newa + ' ' + newb
+
+    # +++ SUA SOLUÇÃO 2 +++
+ #   return b[0] + b[1] + a[2:] + ' ' + a[0] + a[1] + b[2:]
+
+    # +++ SUA SOLUÇÃO 3: replace e join +++
+    newa = a.replace(a[0], b[0]).replace(a[1], b[1])
+    newb = b.replace(b[0], a[0]).replace(b[1], a[1])
+#    return newa + ' ' + newb
+
+    newS = ' '.join([newa, newb])
+    return newS if len(a) > 2 and len(b)>2 else ""
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
