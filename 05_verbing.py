@@ -23,6 +23,12 @@ def verbing(s):
         new_s = ''.join([s, 'ly'])
     elif len(s) >2 and s[-3:] != 'ing':
         new_s = ''.join([s, 'ing'])
+    
+    # +++ SUA SOLUÇÃO 3 - FABIOKREIS +++
+ 
+    #sufix = 'ly' if s[-3:] == 'ing' else 'ing'
+    #return s if len(s) < 3 else ''.join([s, sufix])
+    # return s if len(s) < 3 else s + 'ly' if s[-3:] == 'ing' else s + 'ing'
 
     return new_s
 
